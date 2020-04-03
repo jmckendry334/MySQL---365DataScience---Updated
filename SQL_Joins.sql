@@ -92,9 +92,4 @@ e.last_name
 from salaries s
 join titles t on s.emp_no = t.emp_no
 join employees e on s.emp_no = e.emp_no
-where s.from_date > '2000-01-01';
-
-
-
-
-
+where s.from_date > '1997-01-01';
