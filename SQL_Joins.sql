@@ -93,3 +93,15 @@ from salaries s
 join titles t on s.emp_no = t.emp_no
 join employees e on s.emp_no = e.emp_no
 where s.from_date > '1997-01-01';
+
+
+## Get all emp_no, salaries, hire date, title 
+select
+e.emp_no,
+s.salary,
+s.from_date,
+t.title
+from
+employees e
+join salaries s on s.emp_no = e.emp_no
+join titles t on t.emp_no = e.emp_no;
