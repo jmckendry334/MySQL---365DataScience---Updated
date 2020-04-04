@@ -35,6 +35,20 @@ where e.emp_no = p_emp_no;
 end $$
 delimiter ; 
 
+##THIS IS gonna be a proc getting max salary from people starting after '2001-01-01'
+delimiter ##
+drop procedure if exists Johns_messing_around;
+create procedure Johns_messing_around()
+Begin
+Select max(s.salary), e.first_name, e.last_name
+from salaries s
+join employees e on s.emp_no = e.emp_no
+where from_date > '2001-01-01';
+end ##
+delimiter ;
+call Johns_messing_around;
+
+
 
 
 
